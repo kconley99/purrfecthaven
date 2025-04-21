@@ -1,0 +1,20 @@
+/* resets default design */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Font styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
+
+li, h1, h2, h3 {
+    font-family: 'Carter One', sans-serif;
+}
+
+article, aside, button {
+    font-family: 'Open Sans', sans-serif;
+}
