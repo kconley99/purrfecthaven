@@ -11,7 +11,11 @@ body {
     color: black;
 }
 
-li, h1 {
+li {
+    font-size: 20px;
+}
+
+h1 {
     font-size: 28px;
 }
 
@@ -36,8 +40,12 @@ article, aside, button, p {
     line-height: 2.5;
 }
 
+button {
+    letter-spacing: 1px;
+}
+
 article, p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 aside {
@@ -77,10 +85,10 @@ button {
     color: black;
     font-weight: bold;
     font-size: 18px;
-    padding: .5rem;
     border-radius: 50px;
     border: 2px solid orangered;
     cursor: pointer;
+    padding: 2px;
 }
 
 button:hover {
@@ -98,6 +106,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+}
+
+header img {
+    margin-left: 80px;
 }
 
 .nav-links {
@@ -121,11 +133,17 @@ header {
 .nav-links a:active, .foot-content a:active {
     color: black;
 }
+
+.logo {
+    height: 150px;
+    width: 150px;
+}
 /* intro section */
 
 .intro-container {
     display: flex;
     justify-content: space-between;
+    flex: 1 1 auto;
 }
 
 .intro-content {
@@ -136,6 +154,16 @@ header {
     justify-content: space-between;
     margin: 15px 20px;
     justify-items: center;
+}
+
+.intro-container img {
+    width: 850px;
+    height: 600px;
+    object-fit: cover;
+}
+
+aside a {
+    color: black;
 }
 
 .home-buttons {
@@ -277,4 +305,15 @@ header {
     color: #28a745;
     font-size: 1.2rem;
   }
-  
+
+  /* media queries */
+
+  @media (max-width: 1200px) {
+   .intro-container img {
+    width: 100%;
+    }
+
+    .intro-container {
+        flex-basis: 1 1 600px;
+    }
+  }
