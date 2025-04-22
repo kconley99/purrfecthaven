@@ -2,19 +2,279 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-/* Font styles */
+/* design styles */
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-family: 'Lato', sans-serif;
     line-height: 1.6;
     color: black;
 }
 
-li, h1, h2, h3 {
-    font-family: 'Carter One', sans-serif;
+li, h1 {
+    font-size: 28px;
 }
 
-article, aside, button {
-    font-family: 'Open Sans', sans-serif;
+h2 {
+    font-size: 26px;
 }
+
+h3 {
+    font-size: 24px;
+}
+
+li, h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: orangered;
+    letter-spacing: 2.5px;
+    line-height: 2.5;
+}
+
+article, aside, button, p {
+    font-family: 'Lato',sans-serif;
+    letter-spacing: 2.5px;
+    line-height: 2.5;
+}
+
+article, p {
+    font-size: 18px;
+}
+
+aside {
+    font-size: 16px;
+}
+
+img {
+    border: 3px outset orangered;
+    border-radius: 5px;
+}
+
+.border { /* black border */
+    border: 5px solid black;
+}
+
+.noborder { /* no border  */
+    border: none;
+}
+/* center text */
+.center {
+    text-align: center;
+}
+
+/* orange background color for page */
+.background {
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+/* top and bottom extra space */
+.space {
+    margin: 100px 0;
+}
+
+/* button style */
+button {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: .5rem;
+    border-radius: 50px;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+button:active {
+    background-color: coral;
+}
+
+/* nav menu / header  */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+
+/* nav link + footer link design */
+.nav-links a, .foot-content a {
+    color: orange;
+    text-decoration: none;
+}
+
+.nav-links a:hover, .foot-content a:hover {
+    color: orangered;
+}
+
+.nav-links a:active, .foot-content a:active {
+    color: black;
+}
+/* intro section */
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 20px;
+    justify-items: center;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 5rem;
+}
+
+/* stat section */
+.stat-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+    margin: 50px;
+}
+
+.stat-box {
+    display: wrap;
+}
+
+.stat-txt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+/* partner section */
+.partner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 75px;
+}
+
+/* footer section */
+.foot-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.foot-logo {
+    height: 200px;
+    width: 200px;
+}
+
+/* what we do page */
+.social-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+    margin: 5px;
+}
+
+.soc-box {
+    display: wrap;
+}
+
+.soc-box i {
+    color: black;
+}
+
+.soc-box i:hover {
+    color: orangered;
+}
+
+.soc-box:active {
+    color: coral;
+}
+
+/* contact form */
+/* Contact section styling */
+.contact {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Style all form elements */
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact label {
+    font-weight: bold;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical; /* Only allow vertical resize for textarea */
+  }
+  
+  /* Submit button styling */
+  .contact button {
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #555;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    display: none;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.4s ease;
+  }
+  
+  .success-message i {
+    margin-right: 0.5rem;
+    color: #28a745;
+    font-size: 1.2rem;
+  }
+  

@@ -7,15 +7,17 @@
     <!-- fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- FA icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link to styles sheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- header/nav menu -->
-<header class="head-container">
+<header>
     <div>
-        <img src="images/logo.jpg" alt="Purrfect Haven Cat Rescue logo">
+        <img src="images/logo.jpg" alt="Purrfect Haven Cat Rescue logo" class="noborder">
     </div>
     <nav>
         <ul class="nav-links">
@@ -28,47 +30,54 @@
     </nav>
 </header>
 <main>
-    <!-- intro section -->
-<section class="intro-container">
+<!-- intro section -->
+<section class="intro-container background">
+    <div class="intro-content">
+        <h1 class="center">Welcome to Purrfect Haven Cat Rescue!</h1>
+        <article>Discover the heartwarming stories behind every furry friend we help. Whether you’re looking to adopt, volunteer, or simply learn more about cat rescue, you’re in the right place! Together, we can give cats a second chance at a loving home.</article>
+        <aside>
+            Learn More   <a href="whatwedo.html" target="_blank"><i class="fa-solid fa-greater-than fa-lg"></i></a>
+        </aside>
+    <div class="home-buttons">
+        <a href="donate.html"><button>Donate</button></a>
+        <a href="involved.html"><button>Volunteer</button></a>
+        <a href="help.html"><button>Get Help</button></a>
+    </div>
+    </div>
     <div>
         <img src="images/cat2.jpg" alt="An orange cat sleeping">
-    </div>
-    <div>
-        <h1>Welcome to Purrfect Haven Cat Rescue!</h1>
-    <br>
-        <article>Discover the heartwarming stories behind every furry friend we help. Whether you’re looking to adopt, volunteer, or simply learn more about cat rescue, you’re in the right place! Together, we can give cats a second chance at a loving home.</article>
-        <aside>Learn More<i class="fa-solid fa-greater-than fa-lg"></i></aside>
-    </div>
-    <div class="home-buttons">
-        <button>Donate</button>
-        <button>Volunteer</button>
-        <button>Get Help</button>
     </div>
 </section>
 <!-- stat section -->
  <section>
     <div class="stat-box-container">
         <div class="stat-box">
-            <h2>1,000</h2>
-            <h3>Cats Saved</h3>
-            <i class="fa-solid fa-cat fa-2x"></i>
+            <div class="stat-txt">
+                <h2>1,000</h2>
+                <h3>Cats Saved</h3>
+                <i class="fa-solid fa-cat fa-3x"></i>
+            </div>
         </div>
         <div class="stat-box">
-            <h2>300</h2>
-            <h3>Volunteers</h3>
-            <i class="fa-solid fa-user fa-2x"></i>
+            <div class="stat-txt">
+                <h2>200</h2>
+                <h3>Volunteers</h3>
+                <i class="fa-solid fa-user fa-3x"></i>
+            </div>
         </div>
         <div class="stat-box">
-            <h2>Donate</h2>
-            <h3>Now</h3>
-            <button class="donate-btn"><i class="fa-solid fa-paw fa-lg">></i>
+            <div class="stat-txt">
+                <h2>Donate</h2>
+                <h3>Now</h3>
+                <button class="donate-btn"><i class="fa-solid fa-paw fa-2x"></i>
+            </div>
         </div>
     </div>
  </section>
  <!-- Partner section -->
   <section>
-    <h1>Partners</h1>
-    <div class="partner-container">
+    <h1 class="center background">Partners</h1>
+    <div class="partner-container background">
         <div class="partner"><img src="images/partnerlogo.png" alt="PetSmart logo"></div>
         <div class="partner"><img src="images/partnerlogo.png" alt="PetSmart logo"></div>
         <div class="partner"><img src="images/partnerlogo.png" alt="PetSmart logo"></div>
@@ -80,10 +89,11 @@
     </div>
   </section>
 </main>
+<!-- footer -->
 <footer>
     <section class="foot-container">
         <div>
-            <img src="images/logo.jpg" alt="Purrfect Haven Cat Rescue logo" class="foot-logo">
+            <img src="images/logo.jpg" alt="Purrfect Haven Cat Rescue logo" class="foot-logo noborder">
         </div>
         <div class="foot-content">
             <article>Photos by 
@@ -97,16 +107,3 @@
 </footer>    
 </body>
 </html>
-
-<!-- 
-cat icon link
-<i class="fa-solid fa-cat"></i>
- -->
-<!-- 
- user icon link
- <i class="fa-solid fa-user"></i>
-  -->
- <!-- 
-  paw icon link
-  <i class="fa-solid fa-paw"></i>
-   -->
