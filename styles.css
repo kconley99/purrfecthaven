@@ -88,7 +88,7 @@ button {
     border-radius: 50px;
     border: 2px solid orangered;
     cursor: pointer;
-    padding: 2px;
+    padding: 5px;
 }
 
 button:hover {
@@ -140,10 +140,13 @@ header img {
 }
 /* intro section */
 
+    /* Ensure intro-container is a flexbox with equal height children */
 .intro-container {
     display: flex;
-    justify-content: space-between;
-    flex: 1 1 auto;
+    flex-direction: row; /* Main axis is horizontal */
+    align-items: stretch; /* Ensures equal height */
+    width: 100%; /* Container takes full width */
+    min-height: 400px; /* Optional: Set a minimum height for consistency */
 }
 
 .intro-content {
@@ -153,13 +156,28 @@ header img {
     align-items: center;
     justify-content: space-between;
     margin: 15px 20px;
-    justify-items: center;
+    justify-items: center; 
+    flex: 1 1 50%; /* Take 50% width, grow and shrink as needed */
+    margin: 15px 20px;
 }
 
-.intro-container img {
-    width: 850px;
-    height: 600px;
-    object-fit: cover;
+/* flex image container / image */
+.flex-img {
+    flex: 1 1 50%; /* Take 50% width, grow and shrink as needed */
+    height: 100%; /* Match container height */
+}
+        /*     flex-basis: 50%; Initial width of image is 50% of container */
+        /*  flex-grow: 1; Allow growing if needed */
+        /*     flex-shrink: 1; /* Allow shrinking if needed */ 
+
+
+.flex-img img {
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Scale to cover, may crop */
+    display: block; /* Remove default spacing */
+    border: 3px outset orangered; /* Maintain your border style */
+    border-radius: 5px;
 }
 
 aside a {
@@ -193,9 +211,11 @@ aside a {
 /* partner section */
 .partner-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
-    padding: 75px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 /* footer section */
@@ -232,6 +252,17 @@ aside a {
 
 .soc-box:active {
     color: coral;
+}
+
+/* get involved page */
+/* rescue gallery */
+.rescues-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
 }
 
 /* contact form */
@@ -307,13 +338,44 @@ aside a {
   }
 
   /* media queries */
-
-  @media (max-width: 1200px) {
-   .intro-container img {
-    width: 100%;
-    }
-
+ @media (max-width: 1100px) {
     .intro-container {
-        flex-basis: 1 1 600px;
+        flex-wrap: wrap;
     }
-  }
+
+    .intro-content {
+        gap: 40px;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .intro-content {
+        gap: 30px;
+    }
+
+    .stat-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partner-container {
+        width: 80%;
+
+    }
+
+    .background {
+        width: 100%;
+    }
+
+    .rescues-container {
+        gap: 30px;
+        max-width: 668px;
+        flex: 1 2 868px;
+    }
+ }
+  
