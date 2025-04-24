@@ -263,6 +263,7 @@ aside a {
     justify-content: space-between;
     padding: 20px;
     width: 100%;
+    gap: 50px;
 }
 
 /* contact form */
@@ -365,17 +366,45 @@ aside a {
 
     .partner-container {
         width: 80%;
-
     }
 
     .background {
         width: 100%;
     }
 
-    .rescues-container {
-        gap: 30px;
-        max-width: 668px;
-        flex: 1 2 868px;
+    .background h1 {
+        font-size: 22px;
+    }
+
+    .rescue img {
+        width: 100%;
+    }
+
+    .foot-content article {
+        font-size: 14px;
+    }
+ }
+
+ @media (max-width: 375px) {
+    .home-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .background h1 {
+        font-size: 20px;
+    }
+
+    .foot-content article {
+        font-size: 12px;
+    }
+
+    .rescue img {
+        max-width: 100%;
     }
  }
   
