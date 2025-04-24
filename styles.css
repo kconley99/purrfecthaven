@@ -34,6 +34,10 @@ li, h1, h2, h3 {
     line-height: 2.5;
 }
 
+li, a {
+    text-shadow: 1px 1px 2px grey;
+}
+
 article, aside, button, p {
     font-family: 'Lato',sans-serif;
     letter-spacing: 2.5px;
@@ -159,6 +163,17 @@ header img {
     justify-items: center; 
     flex: 1 1 50%; /* Take 50% width, grow and shrink as needed */
     margin: 15px 20px;
+}
+
+.intro-content aside {
+    border: 2px solid black;
+    padding: 3px;
+    background-color: orange;
+}
+
+.intro-content aside:hover {
+    color: orangered;
+    cursor: pointer;
 }
 
 /* flex image container / image */
